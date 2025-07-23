@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinXray - AI-Powered Startup Risk Analysis Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🔍</text></svg>">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <i class="fas fa-search-dollar"></i>
+                <h2>FinXray</h2>
+            </div>
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Initializing AI Analysis Platform...</p>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Landing Page -->
+    <div id="landing-container" class="landing-wrapper">
+        <!-- Navigation Header -->
+        <nav class="landing-nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-search-dollar"></i>
+                    <span>FinXray</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#" data-page="landing" class="nav-link active">Home</a>
+                    <a href="#" data-page="about" class="nav-link">About Us</a>
+                    <a href="#" data-page="pricing" class="nav-link">Pricing</a>
+                    <a href="#" data-page="auth" class="nav-link login-btn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>Login</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Landing Page Content -->
+        <div id="landing-page" class="landing-page active">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Invest Smarter with AI-Powered Risk Analysis</h1>
+                        <p>FinXray empowers investors with comprehensive startup risk assessment in under 60 seconds. Detect red flags, verify traction claims, and make confident investment decisions.</p>
+                        <div class="hero-actions">
+                            <button class="btn btn--primary btn--lg gradient-btn" data-page="auth">
+                                <span>Start Free Trial</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                            <button class="btn btn--outline btn--lg" data-page="about">
+                                <span>Learn More</span>
+                            </button>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <strong>1000+</strong>
+                                <span>MCA Filings Analyzed</span>
+                            </div>
+                            <div class="stat">
+                                <strong>&lt;60s</strong>
+                                <span>Analysis Time</span>
+                            </div>
+                            <div class="stat">
+                                <strong>95%</strong>
+                                <span>Accuracy Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="dashboard-preview">
+                            <div class="preview-header">
+                                <div class="preview-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="preview-title">FinXray Dashboard</div>
+                            </div>
+                            <div class="preview-content">
+                                <div class="risk-preview">
+                                    <div class="risk-circle">
+                                        <span>72</span>
+                                        <small>/100</small>
+                                    </div>
+                                    <div class="risk-label">Risk Score</div>
+                                </div>
+                                <div class="metrics-preview">
+                                    <div class="metric">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <span>Compliance Check</span>
+                                    </div>
+                                    <div class="metric">
+                                        <i class="fas fa-chart-line"></i>
+                                        <span>Traction Analysis</span>
+                                    </div>
+                                    <div class="metric">
+                                        <i class="fas fa-user-tie"></i>
+                                        <span>Founder Profile</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Why Choose FinXray?</h2>
+                        <p>Advanced AI technology meets investment expertise</p>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon gradient-blue">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>AI-Powered Analysis</h3>
+                            <p>Machine learning models trained on 1000+ MCA filings for accurate risk assessment</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon gradient-gold">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3>60-Second Results</h3>
+                            <p>Get comprehensive startup analysis faster than making a coffee</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon gradient-purple">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <h3>Red Flag Detection</h3>
+                            <p>Automatically identify potential risks and compliance issues</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon gradient-green">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <h3>Traction Verification</h3>
+                            <p>Validate startup claims with data-driven insights</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Us Page -->
+        <div id="about-page" class="landing-page">
+            <div class="about-hero">
+                <div class="container">
+                    <div class="about-header">
+                        <h1>About FinXray</h1>
+                        <p class="about-subtitle">Empowering investors with AI-driven insights to make smarter startup investment decisions</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <div class="container">
+                    <div class="about-section">
+                        <div class="about-text">
+                            <h2>Our Mission</h2>
+                            <p>FinXray is an advanced AI-powered platform that helps startup investors detect red flags, verify traction claims, and assess compliance risks before investing. We believe every investor deserves access to institutional-grade due diligence tools.</p>
+                        </div>
+                        <div class="about-visual">
+                            <div class="mission-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-section reverse">
+                        <div class="about-text">
+                            <h2>Our Technology</h2>
+                            <p>Our platform leverages cutting-edge AI, OCR, NLP, and machine learning models trained on over 1000+ MCA filings to provide comprehensive risk analysis in under 60 seconds. We combine multiple data sources and advanced algorithms to deliver accurate, actionable insights.</p>
+                        </div>
+                        <div class="about-visual">
+                            <div class="tech-stack">
+                                <div class="tech-item">
+                                    <i class="fas fa-robot"></i>
+                                    <span>AI & ML</span>
+                                </div>
+                                <div class="tech-item">
+                                    <i class="fas fa-eye"></i>
+                                    <span>OCR</span>
+                                </div>
+                                <div class="tech-item">
+                                    <i class="fas fa-language"></i>
+                                    <span>NLP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="value-props">
+                        <h2>What We Deliver</h2>
+                        <div class="props-grid">
+                            <div class="prop-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <h3>Instant Risk Assessment</h3>
+                                <p>Get comprehensive risk scores and breakdowns in seconds</p>
+                            </div>
+                            <div class="prop-item">
+                                <i class="fas fa-shield-check"></i>
+                                <h3>Compliance Verification</h3>
+                                <p>Automated compliance checks against regulatory standards</p>
+                            </div>
+                            <div class="prop-item">
+                                <i class="fas fa-check-double"></i>
+                                <h3>Traction Validation</h3>
+                                <p>Verify startup claims with data-driven analysis</p>
+                            </div>
+                            <div class="prop-item">
+                                <i class="fas fa-user-shield"></i>
+                                <h3>Founder Background Analysis</h3>
+                                <p>Deep dive into founder profiles and track records</p>
+                            </div>
+                            <div class="prop-item">
+                                <i class="fas fa-flag"></i>
+                                <h3>Automated Red Flag Detection</h3>
+                                <p>AI-powered identification of potential risks and issues</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pricing Page -->
+        <div id="pricing-page" class="landing-page">
+            <div class="pricing-hero">
+                <div class="container">
+                    <div class="pricing-header">
+                        <h1>Simple, Transparent Pricing</h1>
+                        <p>Start with 3 free analyses, then upgrade for unlimited access</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-content">
+                <div class="container">
+                    <div class="pricing-grid">
+                        <div class="pricing-card trial">
+                            <div class="card-header">
+                                <div class="plan-badge">Most Popular</div>
+                                <h3>Free Trial</h3>
+                                <div class="price">
+                                    <span class="currency">₹</span>
+                                    <span class="amount">0</span>
+                                    <span class="period">for 3 analyses</span>
+                                </div>
+                            </div>
+                            <div class="card-features">
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>3 startup analyses</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Basic risk scoring</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>PDF export</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Email support</span>
+                                </div>
+                            </div>
+                            <button class="btn btn--outline btn--full-width" data-page="auth">
+                                <span>Start Free Trial</span>
+                            </button>
+                        </div>
+
+                        <div class="pricing-card premium">
+                            <div class="card-header">
+                                <div class="plan-badge premium-badge">Professional</div>
+                                <h3>Premium</h3>
+                                <div class="price">
+                                    <span class="currency">₹</span>
+                                    <span class="amount">25,000</span>
+                                    <span class="period">per month</span>
+                                </div>
+                            </div>
+                            <div class="card-features">
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Unlimited analyses</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Advanced AI insights</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Real-time alerts</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Custom reports</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Priority support</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Benchmark comparisons</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Founder background checks</span>
+                                </div>
+                            </div>
+                            <button class="btn btn--primary btn--full-width gradient-btn" data-page="auth">
+                                <span>Get Started</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="pricing-faq">
+                        <h2>Frequently Asked Questions</h2>
+                        <div class="faq-grid">
+                            <div class="faq-item">
+                                <h3>How does the free trial work?</h3>
+                                <p>Sign up and get 3 free startup analyses to experience the full power of FinXray. No credit card required.</p>
+                            </div>
+                            <div class="faq-item">
+                                <h3>What happens after my trial ends?</h3>
+                                <p>You can upgrade to Premium for ₹25,000/month to continue with unlimited analyses and advanced features.</p>
+                            </div>
+                            <div class="faq-item">
+                                <h3>Can I cancel anytime?</h3>
+                                <p>Yes, you can cancel your subscription at any time. There are no long-term commitments.</p>
+                            </div>
+                            <div class="faq-item">
+                                <h3>What file formats do you support?</h3>
+                                <p>We support PDF files for MCA documents and both PDF and PPTX formats for pitch decks.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced Auth Pages -->
+    <div id="auth-container" class="auth-wrapper hidden">
+        <div class="auth-background">
+            <div class="auth-particles"></div>
+            <div class="floating-elements">
+                <div class="float-element" style="top: 10%; left: 10%;"><i class="fas fa-chart-line"></i></div>
+                <div class="float-element" style="top: 20%; right: 15%;"><i class="fas fa-shield-alt"></i></div>
+                <div class="float-element" style="bottom: 30%; left: 20%;"><i class="fas fa-brain"></i></div>
+                <div class="float-element" style="bottom: 20%; right: 10%;"><i class="fas fa-rocket"></i></div>
+            </div>
+        </div>
+        <div class="auth-content">
+            <!-- Back to Landing Button -->
+            <button class="back-to-landing" id="back-to-landing">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back to Home</span>
+            </button>
+
+            <!-- Login Form -->
+            <div id="login-form" class="auth-form active">
+                <div class="auth-header">
+                    <div class="auth-logo">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h1>Welcome to FinXray</h1>
+                    <p>Sign in to access your AI-powered investment analysis</p>
+                </div>
+                <form id="login-form-element" class="auth-form-content">
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-envelope input-icon"></i>
+                            <input type="email" class="form-control" name="email" placeholder="Email address" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock input-icon"></i>
+                            <input type="password" class="form-control" name="password" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width gradient-btn">
+                        <span>Sign In</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+                <div class="auth-footer">
+                    <p>New to FinXray? <a href="#" id="show-signup" class="auth-link">Create account</a></p>
+                </div>
+            </div>
+
+            <!-- Signup Form -->
+            <div id="signup-form" class="auth-form">
+                <div class="auth-header">
+                    <div class="auth-logo">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h1>Join FinXray</h1>
+                    <p>Start your free trial with 3 analyses included</p>
+                </div>
+                <form id="signup-form-element" class="auth-form-content">
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-envelope input-icon"></i>
+                            <input type="email" class="form-control" name="email" placeholder="Email address" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock input-icon"></i>
+                            <input type="password" class="form-control" name="password" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-user-tie input-icon"></i>
+                            <select class="form-control" name="role" required>
+                                <option value="">Select your role</option>
+                                <option value="analyst">Investment Analyst</option>
+                                <option value="partner">Investment Partner</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width gradient-btn">
+                        <span>Start Free Trial</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="#" id="show-login" class="auth-link">Sign in</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div id="app-container" class="app-layout hidden">
+        <!-- Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <i class="fas fa-search-dollar"></i>
+                    <span>FinXray</span>
+                </div>
+            </div>
+            <div class="sidebar-menu">
+                <a href="#" class="nav-link active" data-page="dashboard">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-link" data-page="upload">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <span>Upload</span>
+                </a>
+                <a href="#" class="nav-link" data-page="startups">
+                    <i class="fas fa-rocket"></i>
+                    <span>Startups</span>
+                </a>
+                <a href="#" class="nav-link" data-page="watchlist">
+                    <i class="fas fa-eye"></i>
+                    <span>Watchlist</span>
+                </a>
+                <a href="#" class="nav-link partner-only" data-page="benchmarks">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Benchmarks</span>
+                </a>
+                <a href="#" class="nav-link" data-page="subscription">
+                    <i class="fas fa-crown"></i>
+                    <span>Subscription</span>
+                </a>
+                <a href="#" class="nav-link" data-page="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Top Bar -->
+        <header class="topbar">
+            <div class="topbar-left">
+                <button id="sidebar-toggle" class="btn btn--ghost btn--sm">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="topbar-center">
+                <div class="trial-indicator" id="trial-indicator">
+                    <i class="fas fa-star"></i>
+                    <span id="trial-count">3 free analyses remaining</span>
+                </div>
+            </div>
+            <div class="topbar-right">
+                <button id="theme-toggle" class="btn btn--ghost btn--sm">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="user-menu">
+                    <span id="user-name" class="user-name"></span>
+                    <button id="logout-btn" class="btn btn--outline btn--sm">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Page -->
+            <div id="dashboard-page" class="page active">
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Welcome to FinXray</h1>
+                        <p>AI-powered startup risk analysis at your fingertips</p>
+                    </div>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <div class="feature-card" data-navigate="upload">
+                        <div class="feature-icon gradient-blue">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Analyze Startup</h3>
+                            <p>Upload MCA filings, pitch decks, and URLs for comprehensive AI analysis</p>
+                        </div>
+                        <div class="feature-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card" data-navigate="watchlist">
+                        <div class="feature-icon gradient-purple">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Watchlist</h3>
+                            <p>Monitor your tracked startups and receive intelligent alerts</p>
+                        </div>
+                        <div class="feature-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card" data-navigate="startups">
+                        <div class="feature-icon gradient-green">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>All Startups</h3>
+                            <p>Browse and filter analyzed startups with advanced metrics</p>
+                        </div>
+                        <div class="feature-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-panels">
+                    <div class="panel-card">
+                        <div class="panel-header">
+                            <h3>Recent Analysis</h3>
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <div class="panel-content">
+                            <div id="recent-analyses" class="analysis-list">
+                                <div class="empty-state">
+                                    <i class="fas fa-chart-line"></i>
+                                    <p>No analyses yet. Start by uploading startup documents.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel-card">
+                        <div class="panel-header">
+                            <h3>Risk Distribution</h3>
+                            <i class="fas fa-pie-chart"></i>
+                        </div>
+                        <div class="panel-content">
+                            <div class="empty-state">
+                                <i class="fas fa-chart-pie"></i>
+                                <p>Upload and analyze startups to see risk distribution</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscription Page -->
+            <div id="subscription-page" class="page">
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Subscription Management</h1>
+                        <p>Manage your FinXray subscription and billing</p>
+                    </div>
+                </div>
+
+                <div class="subscription-status">
+                    <div class="status-card" id="current-plan">
+                        <div class="plan-header">
+                            <div class="plan-info">
+                                <h3 id="plan-name">Free Trial</h3>
+                                <p id="plan-status">Active</p>
+                            </div>
+                            <div class="plan-price">
+                                <span id="plan-amount">₹0</span>
+                                <small id="plan-period">/month</small>
+                            </div>
+                        </div>
+                        <div class="plan-details">
+                            <div class="usage-info">
+                                <div class="usage-item">
+                                    <span>Analyses Used</span>
+                                    <strong id="analyses-used">0 / 3</strong>
+                                </div>
+                                <div class="progress-bar">
+                                    <div id="usage-progress" class="progress-fill" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="upgrade-section" id="upgrade-section">
+                    <div class="upgrade-card">
+                        <div class="upgrade-header">
+                            <h2>Upgrade to Premium</h2>
+                            <p>Unlock unlimited analyses and advanced features</p>
+                        </div>
+                        <div class="upgrade-features">
+                            <div class="upgrade-feature">
+                                <i class="fas fa-infinity"></i>
+                                <span>Unlimited startup analyses</span>
+                            </div>
+                            <div class="upgrade-feature">
+                                <i class="fas fa-brain"></i>
+                                <span>Advanced AI insights</span>
+                            </div>
+                            <div class="upgrade-feature">
+                                <i class="fas fa-clock"></i>
+                                <span>Real-time alerts</span>
+                            </div>
+                            <div class="upgrade-feature">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Custom reports</span>
+                            </div>
+                        </div>
+                        <button class="btn btn--primary btn--lg gradient-btn" id="upgrade-btn">
+                            <span>Upgrade for ₹25,000/month</span>
+                            <i class="fas fa-crown"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other existing pages continue... -->
+            <!-- Upload Page -->
+            <div id="upload-page" class="page">
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Upload Documents</h1>
+                        <p>Upload MCA filings, pitch decks, and provide startup URL for AI analysis</p>
+                    </div>
+                    <div class="upload-status" id="upload-status">
+                        <div class="analyses-remaining">
+                            <i class="fas fa-star"></i>
+                            <span id="remaining-count">3 analyses remaining</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="upload-form" class="upload-container">
+                    <div class="upload-grid">
+                        <div class="upload-card">
+                            <div class="upload-header">
+                                <i class="fas fa-file-pdf"></i>
+                                <h3>MCA Filings</h3>
+                                <p>Upload PDF documents</p>
+                            </div>
+                            <div id="mca-dropzone" class="upload-dropzone">
+                                <div class="dropzone-content">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p><strong>Drop MCA files here</strong> or click to browse</p>
+                                    <span>Supports multiple PDF files</span>
+                                </div>
+                                <input type="file" multiple accept=".pdf" class="hidden" id="mca-input">
+                            </div>
+                            <div id="mca-files" class="file-list"></div>
+                        </div>
+
+                        <div class="upload-card">
+                            <div class="upload-header">
+                                <i class="fas fa-presentation"></i>
+                                <h3>Pitch Deck</h3>
+                                <p>PDF or PPTX format</p>
+                            </div>
+                            <div id="pitch-dropzone" class="upload-dropzone">
+                                <div class="dropzone-content">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p><strong>Drop pitch deck here</strong> or click to browse</p>
+                                    <span>PDF or PPTX format</span>
+                                </div>
+                                <input type="file" accept=".pdf,.pptx" class="hidden" id="pitch-input">
+                            </div>
+                            <div id="pitch-files" class="file-list"></div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-header">
+                            <i class="fas fa-info-circle"></i>
+                            <h3>Startup Information</h3>
+                        </div>
+                        <div class="info-grid">
+                            <div class="form-group">
+                                <label class="form-label">Startup Name</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-building input-icon"></i>
+                                    <input type="text" class="form-control" name="startup_name" placeholder="Enter startup name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Website URL</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-globe input-icon"></i>
+                                    <input type="url" class="form-control" name="startup_url" placeholder="https://...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="upload-actions">
+                        <button type="button" class="btn btn--secondary" id="clear-upload">
+                            <i class="fas fa-trash"></i>
+                            <span>Clear All</span>
+                        </button>
+                        <button type="submit" class="btn btn--primary gradient-btn" id="submit-upload">
+                            <span class="upload-text">
+                                <i class="fas fa-play"></i>
+                                Start Analysis
+                            </span>
+                            <div class="upload-spinner hidden">
+                                <div class="spinner"></div>
+                                <span>Processing...</span>
+                            </div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Keep existing analysis, startups, watchlist, benchmarks, and settings pages... -->
+            <!-- Analysis Page -->
+            <div id="analysis-page" class="page">
+                <div class="page-header analysis-header">
+                    <button class="btn btn--ghost btn--sm back-btn" id="back-to-startups">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Back to Startups</span>
+                    </button>
+                    <div class="analysis-title">
+                        <h1 id="analysis-title">Startup Analysis</h1>
+                        <p id="analysis-subtitle">AI-powered risk assessment results</p>
+                    </div>
+                    <div class="analysis-actions">
+                        <button class="btn btn--outline" id="download-report">
+                            <i class="fas fa-download"></i>
+                            <span>Download PDF</span>
+                        </button>
+                        <button class="btn btn--secondary" id="toggle-watchlist">
+                            <i class="fas fa-eye"></i>
+                            <span>Add to Watchlist</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="analysis-loading" class="analysis-loading">
+                    <div class="loading-content">
+                        <div class="analysis-spinner"></div>
+                        <h3>Analyzing Startup...</h3>
+                        <p>This usually takes less than 60 seconds</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="analysis-content" class="analysis-results hidden">
+                    <div class="results-grid">
+                        <div class="risk-score-card">
+                            <div class="risk-score-header">
+                                <h3>Risk Score</h3>
+                            </div>
+                            <div class="risk-score-container">
+                                <div class="risk-score-circle" id="risk-score-circle">
+                                    <span id="risk-score-value">0</span>
+                                    <small>/100</small>
+                                </div>
+                            </div>
+                            <div id="risk-level-badge" class="risk-level-badge"></div>
+                        </div>
+
+                        <div class="risk-breakdown-card">
+                            <div class="card-header">
+                                <h3>Risk Breakdown</h3>
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <div id="risk-breakdown" class="risk-categories">
+                                <!-- Risk categories will be populated here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analysis-details">
+                        <div class="detail-card">
+                            <div class="card-header">
+                                <h3>Founder Profile</h3>
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div id="founder-profile" class="card-content">
+                                <!-- Founder information will be populated here -->
+                            </div>
+                        </div>
+
+                        <div class="detail-card">
+                            <div class="card-header">
+                                <h3>Traction Analysis</h3>
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div id="traction-analysis" class="card-content">
+                                <!-- Traction information will be populated here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="red-flags-card">
+                        <div class="card-header">
+                            <h3>Top Red Flags</h3>
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div id="red-flags" class="red-flags-list">
+                            <!-- Red flags will be populated here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Startups Page -->
+            <div id="startups-page" class="page">
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>All Startups</h1>
+                        <p>Browse and filter analyzed startups</p>
+                    </div>
+                </div>
+
+                <div class="filter-card">
+                    <div class="filter-grid">
+                        <div class="form-group">
+                            <label class="form-label">Search</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-search input-icon"></i>
+                                <input type="text" class="form-control" id="startup-search" placeholder="Search startups...">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Sector</label>
+                            <select class="form-control" id="sector-filter">
+                                <option value="">All Sectors</option>
+                                <option value="FinTech">FinTech</option>
+                                <option value="SaaS">SaaS</option>
+                                <option value="E-commerce">E-commerce</option>
+                                <option value="HealthTech">HealthTech</option>
+                                <option value="EdTech">EdTech</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Stage</label>
+                            <select class="form-control" id="stage-filter">
+                                <option value="">All Stages</option>
+                                <option value="Seed">Seed</option>
+                                <option value="Series A">Series A</option>
+                                <option value="Series B">Series B</option>
+                                <option value="Angel">Angel</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Risk Level</label>
+                            <select class="form-control" id="risk-filter">
+                                <option value="">All Risk Levels</option>
+                                <option value="Low">Low</option>
+                                <option value="Medium">Medium</option>
+                                <option value="High">High</option>
+                                <option value="Critical">Critical</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-card">
+                    <div id="startups-table-container">
+                        <div class="empty-state">
+                            <i class="fas fa-rocket"></i>
+                            <h3>No startups analyzed yet</h3>
+                            <p>Upload startup documents to begin analysis</p>
+                            <button class="btn btn--primary gradient-btn" data-navigate="upload">
+                                <i class="fas fa-upload"></i>
+                                <span>Start Analysis</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Watchlist Page -->
+            <div id="watchlist-page" class="page">
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Watchlist</h1>
+                        <p>Monitor your tracked startups and receive alerts</p>
+                    </div>
+                </div>
+
+                <div class="watchlist-container">
+                    <div id="watchlist-container">
+                        <div class="empty-state">
+                            <i class="fas fa-eye"></i>
+                            <h3>Your watchlist is empty</h3>
+                            <p>Add startups from analysis results to track them</p>
+                            <button class="btn btn--primary gradient-btn" data-navigate="startups">
+                                <i class="fas fa-search"></i>
+                                <span>Browse Startups</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benchmarks Page -->
+            <div id="benchmarks-page" class="page">
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Sector Benchmarks</h1>
+                        <p>Compare startups by sector performance and trends</p>
+                    </div>
+                </div>
+
+                <div class="benchmark-grid">
+                    <div class="benchmark-card">
+                        <div class="card-header">
+                            <h3>Valuation-to-Revenue Ratio</h3>
+                            <i class="fas fa-chart-area"></i>
+                        </div>
+                        <div class="card-content">
+                            <div class="empty-state">
+                                <i class="fas fa-chart-area"></i>
+                                <p>Chart placeholder - Analyze more startups to see benchmarks</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="benchmark-card">
+                        <div class="card-header">
+                            <h3>Failure Trends by Sector</h3>
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="card-content">
+                            <div class="empty-state">
+                                <i class="fas fa-chart-line"></i>
+                                <p>Chart placeholder - Analyze more startups to see trends</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings Page -->
+            <div id="settings-page" class="page">
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Settings</h1>
+                        <p>Manage your account preferences</p>
+                    </div>
+                </div>
+
+                <div class="settings-card">
+                    <form id="settings-form">
+                        <div class="settings-section">
+                            <h3>Profile Information</h3>
+                            <div class="settings-grid">
+                                <div class="form-group">
+                                    <label class="form-label">Email</label>
+                                    <div class="input-wrapper">
+                                        <i class="fas fa-envelope input-icon"></i>
+                                        <input type="email" class="form-control" id="settings-email" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Role</label>
+                                    <div class="input-wrapper">
+                                        <i class="fas fa-user-tie input-icon"></i>
+                                        <input type="text" class="form-control" id="settings-role" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="settings-section">
+                            <h3>Notifications</h3>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="notify-high-risk" class="form-checkbox">
+                                    <span class="checkbox-text">Notify me when watched startups become high-risk</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="settings-actions">
+                            <button type="submit" class="btn btn--primary gradient-btn">
+                                <i class="fas fa-save"></i>
+                                <span>Save Settings</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
